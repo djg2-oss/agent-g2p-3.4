@@ -1,0 +1,12 @@
+{
+  "name": "agent-g2p-3.4",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx tsx server.mjs",
+    "dev": "npx tsx server.mjs"
+  },
+  "dependencies": {
+    "tsx": "^4.20.0"
+  }
+}
