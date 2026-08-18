@@ -31,11 +31,14 @@ createServer(async (req, res) => {
     return;
   }
   if (req.method === "GET" && url.pathname === "/health") {
+    const key = String(process.env.grokg2pai || process.env.XAI_API_KEY || "").trim();
     send(res, 200, {
       ok: true,
       name: G2P_AGENT_MODEL.name,
       version: G2P_AGENT_MODEL.version,
       needsApiKey: false,
+      keyPresent: key.length > 8,
+      keyLooksLikeXai: key.startsWith("xai-"),
       tools: 17,
     });
     return;
