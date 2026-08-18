@@ -2,6 +2,7 @@
   "name": "agent-g2p-3.4",
   "private": true,
   "type": "module",
+  "engines": { "node": ">=20" },
   "scripts": {
     "start": "node server.mjs"
   }
