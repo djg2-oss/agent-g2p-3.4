@@ -31,7 +31,7 @@ createServer(async (req, res) => {
     return;
   }
   if (req.method === "GET" && url.pathname === "/health") {
-    const key = String(process.env.cai_api_key || process.env.CAI_API_KEY || process.env.grokg2pai || process.env.XAI_API_KEY || "").trim();
+    const key = String(process.env.xai_api_key || process.env.XAI_API_KEY || process.env.cai_api_key || process.env.CAI_API_KEY || process.env.grokg2pai || "").trim();
     send(res, 200, {
       ok: true,
       name: G2P_AGENT_MODEL.name,
